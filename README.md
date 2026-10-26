@@ -1,2 +1,2 @@
-# Optimizacion-de-carteras-algoritmos-geneticos
-Trabajo práctico de investigacion presentado en el CONAIISI 2026 sobre algoritmos geneticos aplicados a la economia y finanzas. En este trabajo nos enfocamos en la evaluacion de carteras bajo un marco teorico para optimizar las mismas.
+# TPI_AlgGeneticos_Optimizacion-de-Carteras-Financieras
+“Optimización de Carteras Financieras mediante Algoritmos Genéticos Canónicos: Un enfoque basado en el Modelo de Markowitz para la asignación óptima del capital. “
