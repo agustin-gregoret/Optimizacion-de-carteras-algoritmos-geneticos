@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimización de Carteras · AG</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Optimización de Carteras</h1>
+      <span class="subtitle">Algoritmos genéticos sobre el modelo de Markowitz</span>
+    </header>
+
+    <div class="layout">
+      <!-- ================= PANEL LATERAL ================= -->
+      <aside class="sidebar">
+        <section class="panel">
+          <h2>1. Datos</h2>
+          <div id="tickers" class="tickers"></div>
+          <button id="btn-add-ticker" class="btn-link" type="button">+ Agregar activo</button>
+
+          <div class="row">
+            <label>Período
+              <select id="period">
+                <option value="1y">1 año</option>
+                <option value="2y">2 años</option>
+                <option value="5y" selected>5 años</option>
+                <option value="10y">10 años</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="btn-group">
+            <button id="btn-yahoo" type="button">Descargar de Yahoo</button>
+            <button id="btn-demo" type="button" class="secondary">Datos demo</button>
+            <label class="btn secondary file-btn">Subir CSV
+              <input id="input-csv" type="file" accept=".csv,text/csv" hidden />
+            </label>
+          </div>
+          <p id="data-status" class="status"></p>
+        </section>
+
+        <section class="panel">
+          <h2>2. Parámetros</h2>
+          <div id="params" class="params"></div>
+        </section>
+
+        <section class="panel">
+          <h2>3. Ejecutar</h2>
+          <div class="btn-col">
+            <button data-run="lambda" type="button">Fitness Lambda</button>
+            <button data-run="sharpe" type="button">Índice de Sharpe</button>
+            <button data-run="comparar" type="button">Comparar ambos métodos</button>
+            <button data-run="lambdas" type="button">Comparar valores de λ</button>
+          </div>
+          <label class="inline">Valores de λ
+            <input id="lambdas-list" type="text" value="0, 0.25, 0.375, 0.5, 1, 2" />
+          </label>
+        </section>
+      </aside>
+
+      <!-- ================= CONTENIDO ================= -->
+      <main id="main" class="main">
+        <div class="empty">
+          <p>Cargá datos (Yahoo, demo o CSV) y elegí un método para ejecutar el algoritmo genético.</p>
+        </div>
+      </main>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
